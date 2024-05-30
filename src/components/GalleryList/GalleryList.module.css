@@ -1,0 +1,27 @@
+.galleryListContainer {
+  width: 100%;
+}
+
+.galleryList {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding-left: 0;
+}
+
+.galleryList li {
+  list-style-type: none;
+  width: 100%;
+  max-width: 360px;
+}
+
+.noImagesText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  height: 50vh;
+}
