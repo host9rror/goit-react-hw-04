@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
-import styles from './GalleryCard.module.css';
+import css from './ImageCard.module.css';
 
 const GalleryCard = ({ image, onClick }) => {
   return (
-    <div className={styles.galleryCard} onClick={onClick}>
-      <div className={styles.galleryCardImageContainer}>
+    <div className={css.galleryCard} onClick={onClick}>
+      <div className={css.galleryCardImageContainer}>
         <img
           src={image.urls.small}
           alt={image.alt_description}
-          className={styles.galleryimg}
+          className={css.galleryimg}
         />
       </div>
     </div>

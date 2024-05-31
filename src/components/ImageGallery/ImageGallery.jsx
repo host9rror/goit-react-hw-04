@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
-import GalleryCard from '../GalleryCard/GalleryCard';
-import css from './GalleryList.module.css';
+import ImageCard from '../ImageCard/ImageCard';
+import css from './ImageGallery.module.css';
 
 const GalleryList = ({ images, onImageClick }) => {
 
@@ -9,7 +9,7 @@ const GalleryList = ({ images, onImageClick }) => {
         <ul className={css.galleryList}>
           {images.map(image => (
             <li key={image.id}>
-              <GalleryCard image={image} onClick={() => onImageClick(image)} />
+              <ImageCard image={image} onClick={() => onImageClick(image)} />
             </li>
           ))}
         </ul>

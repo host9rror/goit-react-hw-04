@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import SearchBar from './SearchBar/SearchBar';
 import Loader from './Loader/Loader';
-import GalleryList from './GalleryList/GalleryList';
+import ImageGallery from './ImageGallery/ImageGallery';
 import { fetchPhotosWithQuery } from './images-api';
-import LoadMoreBtn from './LoadMoreButton/LoadMoreButton';
+import LoadMoreBtn from './LoadMoreBtn/LoadMoreBtn';
 import ImageModal from './ImageModal/ImageModal';
 import ErrorMessage from './ErrorMessage/ErrorMessage'; 
 
@@ -14,7 +14,6 @@ function App() {
   const [userSearched, setUserSearched] = useState(false);
   const [hasMoreImages, setHasMoreImages] = useState(false);
   const [page, setPage] = useState(1); 
-  // Виправлено назву змінної isOpen
   const [isModalOpen, setIsModalOpen] = useState(false); 
   const [selectedImage, setSelectedImage] = useState(null);
 
@@ -63,7 +62,7 @@ function App() {
       <SearchBar onSubmit={handleSearch} />
       {loading && <Loader />}
       {images.length === 0 && userSearched && <ErrorMessage />} 
-      <GalleryList images={images} userSearched={userSearched} onImageClick={handleImageClick} />
+      <ImageGallery images={images} userSearched={userSearched} onImageClick={handleImageClick} />
       {hasMoreImages && <LoadMoreBtn onClick={handleLoadMore} />}
       {selectedImage && (
         <ImageModal isOpen={isModalOpen} onRequestClose={closeModal} image={selectedImage} />
