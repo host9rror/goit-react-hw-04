@@ -3,12 +3,13 @@ import css from './ImageCard.module.css';
 
 const GalleryCard = ({ image, onClick }) => {
   return (
-    <div className={css.galleryCard} onClick={onClick}>
+    <div className={css.galleryCard}>
       <div className={css.galleryCardImageContainer}>
         <img
           src={image.urls.small}
           alt={image.alt_description}
           className={css.galleryimg}
+          onClick={onClick}
         />
       </div>
     </div>
